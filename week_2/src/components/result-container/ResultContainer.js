@@ -1,23 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import './ResultContainer.css';
+
 export default class ResultContainer extends React.Component {
     constructor(props) {
         super(props);
     }
 
     render() {
+        const { searchData, filterText } = this.props;
         return (
-            <div>
+            <ul>
                 {
-                    this.props.searchData.filter(s => s.indexOf(this.props.filterText) >= 0)
+                    searchData.filter(s => s.match(new RegExp(filterText, 'gi')))
                         .map((s, i) => {
                             return (
-                                <h4 key={i}>{s}</h4>
+                                <li key={i}>{s}</li>
                             )
                         })
                 }
-            </div>
+            </ul>
         )
     }
 }

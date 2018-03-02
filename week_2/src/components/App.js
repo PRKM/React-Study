@@ -24,12 +24,11 @@ export default class App extends React.Component {
 
     onChangeFilterText(text) {
         this.setState({filterText: text});
-        console.log(text);
     }
 
     render() {
         return (
-            <div>
+            <div style={{width: '300px', margin: '0px auto', textAlign: 'center'}}>
                 <SearchBar text={this.state.filterText} onChange={this.onChangeFilterText} />
                 <ResultContainer filterText={this.state.filterText} searchData={this.state.searchData}/>
             </div>

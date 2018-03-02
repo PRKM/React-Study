@@ -2,7 +2,8 @@ module.exports = {
     entry: './src/index.js',
     output: {
         path: __dirname + '/public/',
-        filename: 'bundle.js'
+        filename: 'bundle.js',
+        publicPath: '/'
     },
     devServer: {
         inline: true,
@@ -10,13 +11,12 @@ module.exports = {
         contentBase: __dirname + '/public/'
     },
     module: {
-        loaders: [
+        rules: [
             {
                 test: /\.js$/,
                 loader: 'babel-loader',
-                exclude: '/node_modules/',
-                query: {
-                    cacheDirectory: true,
+                exclude: ['/node_modules/'],
+                options: {
                     presets: ['es2015', 'react']
                 }
             },

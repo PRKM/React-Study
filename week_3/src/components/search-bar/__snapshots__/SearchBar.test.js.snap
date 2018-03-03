@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SearchBar/> Init render 1`] = `
+<div>
+  <input
+    onChange={[Function]}
+    placeholder="country"
+    type="search"
+    value=""
+  />
+</div>
+`;

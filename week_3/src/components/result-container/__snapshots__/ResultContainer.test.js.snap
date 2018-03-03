@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ResultContainer/> Init state 1`] = `
+<table>
+  <thead>
+    <tr>
+      <th>
+        Country
+      </th>
+      <th>
+        Capital
+      </th>
+      <th>
+        Region
+      </th>
+      <th>
+        Subregion
+      </th>
+      <th>
+        Latitude
+      </th>
+      <th>
+        Longtitude
+      </th>
+    </tr>
+  </thead>
+  <tbody />
+</table>
+`;
